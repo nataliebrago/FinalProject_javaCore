@@ -1,0 +1,45 @@
+# Java Transfers Application
+
+## Description
+This Java application processes money transfer files from an `input` directory, updates account balances in `resources/accounts.txt`, generates a transfer report in `resources/transfers_report.txt`, and archives processed files to the `archive` directory. It demonstrates object-oriented programming, file handling, exception management, and basic concurrency concepts in Java.
+
+Key features:
+- Parses transfer files with account numbers and amounts.
+- Validates accounts and balances.
+- Handles errors gracefully and logs them.
+- Command-line interface for parsing and reporting.
+
+## Requirements
+- Java 8 or higher (uses features like `LocalDateTime` and `Paths`).
+- No external libraries required (uses standard Java API).
+
+## Project Structure
+- `model/`: Data models (`Account.java`, `ReportEntry.java`, `Transaction.java` ).
+- `exception/`: Custom exceptions (`FileProcessingException.java`, `InvalidAccountException`, `InvalidAmountException`).
+- `util/`: Utility classes for file operations (`FileUtils.java`).
+- `service/`: Business logic (`TransferService.java`, `FileParser` , `ReportService`).
+- `main/`: Entry point (`MainApp.java`).
+- `resources/`: Account file (`accounts.txt`) and report (`transfers_report.txt`).
+- `input/`: Directory for transfer files.
+- `archive/`: Directory for processed files.
+
+## Setup and Usage
+1. Clone the repository: `git clone origin	https://github.com/nataliebrago/FinalProject_javaCore.git`
+2. Navigate to the project directory: `cd java-transfers-app`
+3. Compile the code: `javac -d . */*.java` (or use an IDE like IntelliJ IDEA).
+4. Run the application: `java main.MainApp`
+
+### Example Usage
+- Place transfer files (e.g., `transfer1.txt` with content like `C 12345-67890 На 54321-09876 Сумма перевода: 10`) in the `input/` directory.
+- Run the app and enter `1` to parse files.
+- Enter `2` to print the report.
+- Enter `3` to print history by date
+- Check updated `accounts.txt` and `transfers_report.txt`.
+
+### Sample Transfer File Format
+Each line in a transfer file: `fromAccount toAccount amount`
+- Example: `12345-67890 54321-09876 1000`
+
+### Error Handling
+- Invalid account formats or negative amounts are logged as errors.
+- Insufficient balance prevents transfers.
