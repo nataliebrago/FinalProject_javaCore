@@ -30,7 +30,9 @@ Key features:
 4. Run the application: `java main.MainApp`
 
 ### Example Usage
-- Place transfer files (e.g., `transfer1.txt` with content like `C 12345-67890 На 54321-09876 Сумма перевода: 10`) in the `input/` directory.
+- Place transfer files (e.g., `transfer1.txt` with content like `C 54321-99876
+                                                                 На 66666-66666
+                                                                 Сумма перевода: 10`) in the `input/` directory.
 - Run the app and enter `1` to parse files.
 - Enter `2` to print the report.
 - Enter `3` to print history by date
@@ -38,7 +40,9 @@ Key features:
 
 ### Sample Transfer File Format
 Each line in a transfer file: `fromAccount toAccount amount`
-- Example: `12345-67890 54321-09876 1000`
+- Example: `С 54321-99876
+            На 66666-66666
+            Сумма перевода: 20`
 
 ### Error Handling
 - Invalid account formats or negative amounts are logged as errors.
