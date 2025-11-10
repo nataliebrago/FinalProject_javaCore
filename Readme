@@ -24,7 +24,7 @@ Key features:
 - `archive/`: Directory for processed files.
 
 ## Setup and Usage
-1. Clone the repository: `git clone origin	https://github.com/nataliebrago/FinalProject_javaCore.git`
+1. Clone the repository: `git clone origin	https://github.com/nataliebrago/FinalProject_javaCore/tree/develop`
 2. Navigate to the project directory: `cd java-transfers-app`
 3. Compile the code: `javac -d . */*.java` (or use an IDE like IntelliJ IDEA).
 4. Run the application: `java main.MainApp`
